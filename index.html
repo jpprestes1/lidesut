@@ -28,20 +28,24 @@
             border-radius: 10px;
             border: 3.5px solid #ff6600;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 80%;
+            height: 90%;
+            min-width: 45%;
+            
         }
         .container h1 {
-            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
             color: #ff6600; /* Orange color */
         }
         .links{
-            max-height: 500px;
+            max-height: 65%;
             overflow-y: auto;
             width: 100%;
+            overflow-x: hidden;
         }
         /* Custom Scrollbar Styles */
         .links::-webkit-scrollbar {
-            width: 8px;
+            width: 4px;
         }
         .links::-webkit-scrollbar-track {
             background: rgba(255, 102, 0, 0.1);
@@ -70,24 +74,72 @@
             align-items: center;
             justify-content: center;
             width: 95%;
+            font-weight: 700;
+        }
+        .img{
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+            vertical-align: middle;
         }
         .link:hover {
             background-color: #cc5200; /* Darker orange color */
+        }
+        .esconder{
+            display: none !important;
+        }
+        button {
+            background-color: transparent;
+            width: 30%;
+            border: none;
+            color: #ff6600;
+            font-weight: bold;
+        }
+        .active {
+            border-bottom: 3px solid #ff6600;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            
+        }
+        .title {
+            display: flex;
+        }
+        .titleItem {
+            flex: 1;   
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .titleItem a{
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="images/profile-pic.png" alt="Logo" width="100">
-        <h1>LidesUT</h1>
-        <div class="links">
-            <a href="https://livepix.gg/lidesut" class="link">INTERAJA COM A LIVE - LIVE PIX 📨</a>
-            <a href="https://api.whatsapp.com/send?phone=5511933233323&text=𝐎𝐥𝐚́%20𝐜𝐨𝐧𝐡𝐞𝐜𝐢%20𝐏𝐞𝐥𝐨%20𝐋𝐢𝐝𝐞𝐬𝐮𝐭" class="link">GARANTA SEU EA FC MAIS BARATO - MAIS BARATO GAMES 🎮</a>
-            <a href="https://api.whatsapp.com/send?phone=5511981525068&text=Ol%C3%A1%20Vim%20doLIDSUT+quero+comprar+COINS" class="link">COINS PELO MELHOR VALOR DO MERCADO - PAGUE MENOS 💰</a>
+        <div class="title">
+            <div class="titleItem"></div>
+            <div class="titleItem"><h1>LidesUT</h1></div>
+            <div class="titleItem" style="justify-content: end !important;"> <a href="https://livepix.gg/lidesut"><img src="https://raichu-uploads.s3.amazonaws.com/logo_livepix_lAXW83.png" alt="Live Icon" class="img"></a></div>
+        </div>
+
+        <div class="buttons">
+            <button id="linksButton" class="active">HOME</button>
+            <button id="parceirosButton">PARCEIROS</button>
+            <button id="itemsButton">ITEMS DE REVIEW</button>
+        </div>
+        <div id="parceiros" class="links esconder">
             <a href="https://www.golbox.club/" class="link">CAMISA DE TIME MISTERIOSA COM DESCONTO - USE "LIDESUT10" 👕</a>
-            <a href="https://youtu.be/oWu7Nu3TmJ4" class="link">MONITOR TAURUS PRO - BLUECASE - REVIEW COMPLETA 🖥️</a>
-            <a href="https://dada.link/140Wzk" class="link">FONE EM AÇO ROXO - HAVIT H2002C+U 🎧</a>
+            <a href="https://api.whatsapp.com/send?phone=5511933233323&text=𝐎𝐥𝐚́%20𝐜𝐨𝐧𝐡𝐞𝐜𝐢%20𝐏𝐞𝐥𝐨%20𝐋𝐢𝐝𝐞𝐬𝐮𝐭" class="link">GARANTA SEU EA FC MAIS BARATO - MAIS BARATO GAMES 🎮</a>
             <a href="https://br.topps.com/" class="link">CARDS DE FUTEBOL COM DESCONTO - USE "LIDES10TOPPS" ⚽</a>
+        </div>
+        <div id="links" class="links">
+            <a href="https://api.whatsapp.com/send?phone=5511981525068&text=Ol%C3%A1%20Vim%20doLIDSUT+quero+comprar+COINS" class="link">COINS PELO MELHOR VALOR DO MERCADO - PAGUE MENOS 💰</a>
             <a href="https://kick.com/lidesut" class="link">SIGA NA KICK 📺</a>
             <a href="https://www.instagram.com/lidesut/" class="link">SIGA NO INSTAGRAM 📸</a>
             <a href="https://www.tiktok.com/@lidesut" class="link">SIGA NO TIKTOK 🎵</a>
@@ -95,7 +147,39 @@
             <a href="https://www.twitch.tv/lidesut" class="link">SIGA NO TWITCH 🎮</a>
             <a href="https://discord.gg/pjqpjPydSN" class="link">ENTRE NO NOSSO DISCORD 😄</a>
         </div>
+        <div id="items" class="links esconder">
+            <a href="https://youtu.be/oWu7Nu3TmJ4" class="link">MONITOR TAURUS PRO - BLUECASE - REVIEW COMPLETA 🖥️</a>
+            <a href="https://dada.link/140Wzk" class="link">FONE EM AÇO ROXO - HAVIT H2002C+U 🎧</a>
+        </div>
         
     </div>
 </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("linksButton").addEventListener("click", function() {
+                document.getElementById("links").classList.remove("esconder");
+                document.getElementById("items").classList.add("esconder");
+                document.getElementById("parceiros").classList.add("esconder");
+                document.getElementById("linksButton").classList.add("active");
+                document.getElementById("parceirosButton").classList.remove("active");
+                document.getElementById("itemsButton").classList.remove("active");
+            });
+            document.getElementById("parceirosButton").addEventListener("click", function() {
+                document.getElementById("parceiros").classList.remove("esconder");
+                document.getElementById("links").classList.add("esconder");
+                document.getElementById("items").classList.add("esconder");
+                document.getElementById("parceirosButton").classList.add("active");
+                document.getElementById("linksButton").classList.remove("active");
+                document.getElementById("itemsButton").classList.remove("active");
+            });
+            document.getElementById("itemsButton").addEventListener("click", function() {
+                document.getElementById("items").classList.remove("esconder");
+                document.getElementById("links").classList.add("esconder");
+                document.getElementById("parceiros").classList.add("esconder");
+                document.getElementById("itemsButton").classList.add("active");
+                document.getElementById("parceirosButton").classList.remove("active");
+                document.getElementById("linksButton").classList.remove("active");
+            });
+        });
+    </script>
 </html>
