@@ -24,7 +24,7 @@
         .container {
             text-align: center;
             background-color: transparent;
-            padding: 10px 0px 10px 10px;
+            padding: 10px 5px;
             border-radius: 10px;
             border: 3.5px solid #ff6600;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,8 @@
             color: #ff6600; /* Orange color */
         }
         .links{
-            max-height: 65%;
+            min-height: 65%;
+            max-height: 75%;
             overflow-y: auto;
             width: 100%;
             overflow-x: hidden;
@@ -64,7 +65,7 @@
         }
         .link {
             display: block;
-            margin: 10px 0;
+            margin: 10px auto;
             padding: 10px;
             background-color: #ff6600; /* Orange color */
             color: #221e1e; /* Black color */
@@ -94,6 +95,7 @@
             border: none;
             color: #ff6600;
             font-weight: bold;
+            font-size: 17px;
         }
         .active {
             border-bottom: 3px solid #ff6600;
@@ -109,13 +111,16 @@
         }
         .titleItem {
             flex: 1;   
-            height: 80px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .titleItem a{
             margin-right: 10px;
+        }
+        .icons{
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -127,7 +132,14 @@
             <div class="titleItem"><h1>LidesUT</h1></div>
             <div class="titleItem" style="justify-content: end !important;"> <a href="https://livepix.gg/lidesut"><img src="https://raichu-uploads.s3.amazonaws.com/logo_livepix_lAXW83.png" alt="Live Icon" class="img"></a></div>
         </div>
-
+        <div class="icons">
+            <a href="https://kick.com/lidesut"><img src="https://i.pinimg.com/736x/f6/4f/56/f64f5611aabc03a17fa0a1ddfc7d0490.jpg" alt="Live Icon" class="img"></a>
+            <a href="https://www.twitch.tv/lidesut"><img style="width: 50px !important; height: 50px !important;" src="https://images.icon-icons.com/3041/PNG/512/twitch_logo_icon_189242.png" alt="Live Icon" class="img"></a>
+            <a href="https://www.instagram.com/lidesut/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Live Icon" class="img"></a>
+            <a href="https://www.tiktok.com/@lidesut"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tiktok_icon.svg/1024px-Tiktok_icon.svg.png" alt="Live Icon" class="img"></a>
+            <a href="https://discord.gg/pjqpjPydSN"><img src="https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg" alt="Live Icon" class="img"></a>
+            <a href="https://www.youtube.com/@lidesut"><img style="width: 50px !important; height: 35px !important;" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Live Icon" class="img"></a>
+        </div>
         <div class="buttons">
             <button id="linksButton" class="active">HOME</button>
             <button id="parceirosButton">PARCEIROS</button>
@@ -135,19 +147,14 @@
         </div>
         <div id="parceiros" class="links esconder">
             <a href="https://www.golbox.club/" class="link">CAMISA DE TIME MISTERIOSA COM DESCONTO - USE "LIDESUT10" 👕</a>
-            <a href="https://api.whatsapp.com/send?phone=5511933233323&text=𝐎𝐥𝐚́%20𝐜𝐨𝐧𝐡𝐞𝐜𝐢%20𝐏𝐞𝐥𝐨%20𝐋𝐢𝐝𝐞𝐬𝐮𝐭" class="link">GARANTA SEU EA FC MAIS BARATO - MAIS BARATO GAMES 🎮</a>
+            <a href="https://simulador.panthus.com.br" class="link">CRIE O UNIFORME DOS SONHOS - PANTHUS SPORT 👕</a>
             <a href="https://br.topps.com/" class="link">CARDS DE FUTEBOL COM DESCONTO - USE "LIDES10TOPPS" ⚽</a>
             <a href="https://www.evokeenergy.com.br" class="link">ENERGÉTICO OFICIAL DO LIDES ⚡</a>
-            <a href="https://simulador.panthus.com.br" class="link">CRIE O UNIFORME DOS SONHOS - PANTHUS SPORT 👕</a>
         </div>  
         <div id="links" class="links">
             <a href="https://api.whatsapp.com/send?phone=5511981525068&text=Ol%C3%A1%20Vim%20doLIDSUT+quero+comprar+COINS" class="link">COINS PELO MELHOR VALOR DO MERCADO - PAGUE MENOS 💰</a>
-            <a href="https://kick.com/lidesut" class="link">SIGA NA KICK 📺</a>
-            <a href="https://www.instagram.com/lidesut/" class="link">SIGA NO INSTAGRAM 📸</a>
-            <a href="https://www.tiktok.com/@lidesut" class="link">SIGA NO TIKTOK 🎵</a>
-            <a href="https://www.youtube.com/@lidesut" class="link">SIGA NO YOUTUBE ▶️</a>
-            <a href="https://www.twitch.tv/lidesut" class="link">SIGA NO TWITCH 🎮</a>
-            <a href="https://discord.gg/pjqpjPydSN" class="link">ENTRE NO NOSSO DISCORD 😄</a>
+            <a href="https://api.whatsapp.com/send?phone=5553991397480&text=Olá+gostaria+assinar+a+escola+de+trade" class="link">MULTIPLIQUE SUAS COINS - ESCOLA DE TRADE 🎓</a>
+            <a href="https://api.whatsapp.com/send?phone=5511933233323&text=𝐎𝐥𝐚́%20𝐜𝐨𝐧𝐡𝐞𝐜𝐢%20𝐏𝐞𝐥𝐨%20𝐋𝐢𝐝𝐞𝐬𝐮𝐭" class="link">GARANTA SEU EA FC MAIS BARATO - MAIS BARATO GAMES 🎮</a>
         </div>
         <div id="items" class="links esconder">
             <a href="https://youtu.be/oWu7Nu3TmJ4" class="link">MONITOR TAURUS PRO - BLUECASE - REVIEW COMPLETA 🖥️</a>
@@ -158,7 +165,7 @@
             <a href="https://s.click.aliexpress.com/e/_oF65OJp" class="link">FIFINE AM8 - MICROFONE RGB E USB 🎤</a>
             <a href="https://s.click.aliexpress.com/e/_oC9KHAF" class="link">FIFINE X3 - FONE BLUETOOTH 🎧</a>
         </div>
-        
+
     </div>
 </body>
     <script>
